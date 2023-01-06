@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+}
+
+body {
+    background-color: hsl(210, 60%, 98%);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.notification {
+    margin: 50px;
+    margin-left: 300px;
+    background-color: white;
+    width: 700px;
+    position: relative;
+}
+
+.noti-cont h1 {
+    margin: 30px;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+
+.noti-cont h1 .notifications-num {
+    color: white;
+    padding: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 40px;
+    height: 40px;
+    background-color: hsl(219, 85%, 26%);
+    border-radius: 6px;
+    font-size: 20px;
+
+}
+
+.noti-cont .all-read {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    color: hsl(219, 14%, 63%);
+    border: none;
+
+}
+
+.noti-cont div {
+    position: relative;
+    margin-left: 25px;
+}
+
+.noti-cont div.unread {
+    background-color: hsl(210, 60%, 98%)
+}
+
+.noti-cont div:not(:nth-of-type(4)) {
+    width: 650px;
+    height: 80px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.noti-cont div img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50px;
+}
+
+.noti-cont div h3 {
+    position: absolute;
+    font-size: 14px;
+    left: 0;
+    top: 8px;
+    font-weight: normal;
+    margin-left: 110px;
+    color: hsl(219, 12%, 42%);
+}
+
+.noti-cont div h3 .name {
+    color: hsl(224, 21%, 14%);
+    font-weight: bold;
+
+}
+
+.noti-cont div h3 span.yes {
+    color: hsla(219, 85%, 26%, 0.753);
+    font-weight: bold;
+}
+
+.noti-cont div.unread h3 span.yes {
+    color: hsl(219, 85%, 26%);
+    font-weight: bold;
+}
+
+.not {
+    color: hsl(219, 12%, 42%);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: hsl(1, 90%, 64%);
+    position: absolute;
+    right: -15px;
+    top: 5px;
+}
+
+.noti-cont div h6 {
+    font-size: 13px;
+    position: absolute;
+    top: 40px;
+    left: 110px;
+    color: hsl(219, 14%, 63%);
+    font-weight: normal;
+}
+
+.noti-cont div:nth-of-type(4) {
+    width: 650px;
+    height: 200px;
+    position: relative;
+}
+
+.noti-cont div:nth-of-type(4).unread p {
+    background-color: hsl(205, 33%, 90%);
+
+}
+
+/* .n2 h3 {
+    color: hsl(224, 21%, 14%);
+}
+
+.n2 h3 span,
+.n4 h3 span,
+.n5 h3 span {
+    color: hsl(219, 14%, 63%);
+} */
+
+.noti-cont div:nth-of-type(4) p {
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    font-size: 16px;
+    color: hsl(219, 12%, 42%);
+    border: 1px solid hsla(218, 14%, 63%, 0.253);
+    padding: 7px;
+
+}
+
+@media (max-width:768px) {
+    body {
+        width: 375px;
+    }
+
+    .notification {
+        width: 370px;
+        margin: 0;
+    }
+
+    .noti-cont h1 {
+        width: 200px;
+    }
+
+    .noti-cont div:not(:nth-of-type(4)) {
+        width: 330px;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .noti-cont div h3 {
+        width: 260px;
+        margin-left: 80px;
+    }
+
+    .noti-cont div img {
+        left: 20px;
+    }
+
+    .noti-cont div:nth-of-type(4) {
+        width: 330px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .noti-cont div:nth-of-type(4) p {
+        width: 250px;
+        left: 80px;
+    }
+
+    .dot {
+        top: 10px;
+        right: 0px;
+    }
+
+    .noti-cont .all-read {
+        right: 20px;
+        top: 40px;
+    }
+
+}
